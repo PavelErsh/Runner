@@ -2,7 +2,6 @@
 
 #include <SFML/Graphics.hpp>
 #include "player.h"
-#include <iostream>
 
 using namespace sf;
 
