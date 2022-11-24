@@ -1,9 +1,9 @@
 #pragma once
-
-#include <SFML/Graphics.hpp>
-#include "constants.cpp"
-
+#include "player.h"
 using namespace sf;
+
+const int HEIGHT_MAP = 21;
+const int WIDTH_MAP = 12;
 
 class Map{
     private:
@@ -15,33 +15,34 @@ class Map{
 
             "sssssssssssssssssssss",
 
-            "sgggggggggggggggggggs",
+                "sgggggggggggggggggggs",
 
-            "sgggggggggggggggggggs",
+                "sgggggggggggggggggggs",
 
-            "sgggggggggggggggggggs",
+                "sgggggggggggggggggggs",
 
-            "sgggggggggggggggggggs",
+                "sgggggggggggggggggggs",
 
-            "sgggggggggggggggggggs",
+                "sgggggggggggggggggggs",
 
-            "sgggggggggggggggggggs",
+                "sgggggggggggggggggggs",
 
-            "sgggggggggggggggggggs",
+                "sgggggsgggggggggggggs",
 
-            "sgggggggggggggggggggs",
+                "sgggggggggsgggggggggs",
 
-            "sgggggggggggggggggggs",
+                "sgggggggggggggsgggggs",
 
-            "sgggggggggggggggggggs",
+                "sggggsggggggggggggggs",
 
-            "sssssssssssssssssssss"
+                "sssssssssssssssssssss"
 
             };
 
+            Player player = Player("images/player.png", 80, 120, 0, 0);
+
     public:
         Map();
-        void draw(RenderWindow window);
-
+        void draw(RenderWindow &window);
 };
 
