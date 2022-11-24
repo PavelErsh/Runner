@@ -2,8 +2,8 @@
 #include "player.h"
 using namespace sf;
 
-const int HEIGHT_MAP = 21;
-const int WIDTH_MAP = 12;
+const int HEIGHT_MAP = 12;
+const int WIDTH_MAP = 21;
 
 class Map{
     private:
@@ -11,7 +11,7 @@ class Map{
         Texture map_texture;
         Sprite map_sprite;
 
-        sf::String tile_map[HEIGHT_MAP] = {
+        String tile_map[HEIGHT_MAP] = {
 
             "sssssssssssssssssssss",
 
@@ -27,13 +27,13 @@ class Map{
 
                 "sgggggggggggggggggggs",
 
-                "sgggggsgggggggggggggs",
+                "sgggggggggggggggggggs",
 
-                "sgggggggggsgggggggggs",
+                "sgggggggggggggggggggs",
 
-                "sgggggggggggggsgggggs",
+                "sgggggggggggggggggggs",
 
-                "sggggsggggggggggggggs",
+                "sgggggggggggggggggggs",
 
                 "sssssssssssssssssssss"
 

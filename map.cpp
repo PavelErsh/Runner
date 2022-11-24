@@ -1,5 +1,9 @@
 #include "map.h"
+
 using namespace sf;
+
+const int ITEM_WIDTH = 60;
+const int ITEM_HEIGHT = 60;
 
  Map::Map(){
     map_image.loadFromFile("images/textures.jpg");
@@ -12,14 +16,14 @@ using namespace sf;
         for(int column = 0; column < WIDTH_MAP; column++){
             
             if(tile_map[row][column] == 's'){
-                map_sprite.setTextureRect(IntRect(0, 0, 60, 60));
+                map_sprite.setTextureRect(IntRect(0, 0, ITEM_WIDTH, ITEM_HEIGHT));
             }
 
             if(tile_map[row][column] == 'g'){
-                map_sprite.setTextureRect(IntRect(60 * 0, 60 * 1, 60, 60));
+                map_sprite.setTextureRect(IntRect(ITEM_WIDTH * 0, ITEM_HEIGHT* 1, ITEM_WIDTH, ITEM_HEIGHT));
             }
 
-            map_sprite.setPosition(row * 60, column * 60);
+            map_sprite.setPosition(column * ITEM_WIDTH, row * ITEM_HEIGHT);
             window.draw(map_sprite);
         }
     }
