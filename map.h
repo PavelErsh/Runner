@@ -39,10 +39,12 @@ class Map{
 
             };
 
-            Player player = Player("images/player.png", 80, 120, 0, 0);
+            Player *player;
 
     public:
         Map();
         void draw(RenderWindow &window);
+        Player* get_player();
+        void update();
 };
 

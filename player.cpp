@@ -31,4 +31,17 @@ void Player::set_text_rect(IntRect rect){
 	sprite.setTextureRect(rect);
 }
 
+void Player::set_speed(Vector2f speed){
+	this->speed = speed;
+}
+
+Vector2f Player::get_speed(){
+	return speed;
+}
+
+void Player::update(){
+	sprite.move(speed.x, speed.y);
+	position = sprite.getPosition();
+}
+
 
