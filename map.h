@@ -7,44 +7,31 @@ const int WIDTH_MAP = 21;
 
 class Map{
     private:
+        Player *player;
         Image map_image;
         Texture map_texture;
         Sprite map_sprite;
 
         String tile_map[HEIGHT_MAP] = {
-
             "sssssssssssssssssssss",
-
-                "sgggggggggggggggggggs",
-
-                "sgggggggggggggggggggs",
-
-                "sgggggggggggggggggggs",
-
-                "sgggggggggggggggggggs",
-
-                "sgggggggggggggggggggs",
-
-                "sgggggggggggggggggggs",
-
-                "sgggggggggggggggggggs",
-
-                "sgggggggggggggggggggs",
-
-                "sgggggggggggggggggggs",
-
-                "sgggggggggggggggggggs",
-
-                "sssssssssssssssssssss"
-
+            "sgggggggggggggggggggs",
+            "sgggggggggggggggggggs",
+            "sgggggggggggggggggggs",
+            "sgggggggggggggggggggs",
+            "sgggggggggggggggggggs",
+            "sgggggggggggggggggggs",
+            "sgggggggggggggggggggs",
+            "sgggggggggggggggggggs",
+            "sgggggggggggggggggggs",
+            "sgggggggggggggggggggs",
+            "sssssssssssssssssssss"
             };
-
-            Player *player;
 
     public:
         Map();
-        void draw(RenderWindow &window);
         Player* get_player();
+
+        void draw(RenderWindow &window);
         void update();
 };
 

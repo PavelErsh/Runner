@@ -25,7 +25,7 @@ void Engine::loop(){
 }
 
 void Engine::draw(){
-	window.clear(Color(0, 255, 0));
+	window.clear(Color());
 	map.draw(window);
 	window.display();
 }

@@ -18,7 +18,7 @@ Player* Map::get_player(){
     return player;
 }
  void Map::draw(RenderWindow &window){
-    window.clear();
+   
     for(int row = 0; row < HEIGHT_MAP; row++){
         for(int column = 0; column < WIDTH_MAP; column++){
             
