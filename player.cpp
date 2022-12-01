@@ -19,6 +19,12 @@ Vector2f Player::get_position(){
 	return sprite.getPosition();
 }
 
+void Player::flip_verticali(bool is_fleep){
+	if(is_fleep == true){
+	
+	}
+}
+
 void Player::set_position(Vector2f position){
 	sprite.setPosition(position.x, position.y);
 }

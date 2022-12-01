@@ -32,5 +32,6 @@ void Engine::draw(){
 
 void Engine::update(){
 	key_press.action();
+	key_press.animation();
 	map.update();
 }

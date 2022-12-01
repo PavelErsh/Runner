@@ -1,9 +1,7 @@
 #include "map.h"
+#include "constants.cpp"
 
 using namespace sf;
-
-const int ITEM_WIDTH = 134;
-const int ITEM_HEIGHT = 133;
 
  Map::Map(){
     map_image.loadFromFile("images/map1.png");
