@@ -49,13 +49,13 @@ void Key_press::animation(){
     clock.restart();
 
     if(Keyboard::isKeyPressed(Keyboard::Right)){
-        player->current_frame = player->current_frame + 0.2 * time; 
+        player->current_frame = player->current_frame + FRAME_SPEED * time; 
         check_frame(6);
         player->set_text_rect(IntRect(int(player->current_frame) * 200, 4*200, 200, 200));
      }
 
     if(Keyboard::isKeyPressed(Keyboard::Left)){
-        player->current_frame = player->current_frame + 0.2 * time; 
+        player->current_frame = player->current_frame + FRAME_SPEED * time; 
         check_frame(6);
         player->set_text_rect(IntRect(int(player->current_frame) * 200, 4*200, -200, 200));
      }

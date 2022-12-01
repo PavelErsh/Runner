@@ -10,3 +10,4 @@ const int ITEM_WIDTH = 134;
 const int ITEM_HEIGHT = 133;
 
 const float PLAYER_SPEED = 1.5;
+const float FRAME_SPEED = 0.2;
