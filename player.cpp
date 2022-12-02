@@ -20,8 +20,8 @@ Player::Player(String player_img, int frame_width, int frame_height, int start_r
 	set_position( Vector2f(0, 0) );
 }
 
-void  Player::check_frame(int max_frame, bool is_filp)
-{
+void  Player::check_frame(int max_frame, bool is_filp){
+	
 	if(current_frame > max_frame and is_filp == false)
 	{
 		current_frame -= max_frame;
@@ -33,7 +33,7 @@ void  Player::check_frame(int max_frame, bool is_filp)
 	}
 }
 
-void Player::next_frame(int frame_row, int max_frame , bool is_fleep = false){
+void Player::next_frame(int frame_row, int max_frame, bool is_fleep){
 	Clock clock;
     float time = clock.getElapsedTime().asMicroseconds();
     clock.restart();

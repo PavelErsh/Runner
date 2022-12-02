@@ -1,11 +1,6 @@
 #include "key_press.h"
 #include "constants.cpp"
 
-
-Key_press::Key_press(){
-
-}
-
 void Key_press::set_player(Player* player){
     this->player = player;
 }

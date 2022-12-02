@@ -24,7 +24,6 @@ class Player {
 
 		void update();
 		void next_frame( int frame_row, int max_frame , bool is_fleep);
-		void max_frame(int max_frame, bool is_filp);
 		void  check_frame(int max_frame, bool is_filp);
 
 		Vector2f get_position();
