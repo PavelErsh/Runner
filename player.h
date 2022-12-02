@@ -13,16 +13,19 @@ class Player {
 
 	public:
 		float current_frame = 0;
-		int freme_widht;
+		int frame_widht;
 		int frame_height;
 
 		Player(String player_img, int frame_width, int frame_height, int start_row, int start_column);
 
 		void set_position(Vector2f position);
-		void set_text_rect(IntRect rect);
+		void set_texture_rect(IntRect rect);
 		void set_speed(Vector2f speed);
-		void flip_verticali(bool is_fleep);
+
 		void update();
+		void next_frame( int frame_row, int max_frame , bool is_fleep);
+		void max_frame(int max_frame, bool is_filp);
+		void  check_frame(int max_frame, bool is_filp);
 
 		Vector2f get_position();
 		Vector2f get_speed();

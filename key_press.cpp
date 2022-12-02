@@ -1,13 +1,6 @@
 #include "key_press.h"
 #include "constants.cpp"
 
-void  Key_press::check_frame(int max_frame)
-{
-	if( player->current_frame > max_frame)
-	{
-		player->current_frame -= max_frame;
-	}
-}
 
 Key_press::Key_press(){
 
@@ -39,25 +32,16 @@ void Key_press::action(){
     }
 
     else{
-        player->set_speed(Vector2f(0, 0));
+        player->set_speed(Vector2f(NULL, NULL));
     }
 }
 
 void Key_press::animation(){
-    Clock clock;
-    float time = clock.getElapsedTime().asMicroseconds();
-    clock.restart();
-
     if(Keyboard::isKeyPressed(Keyboard::Right)){
-        player->current_frame = player->current_frame + FRAME_SPEED * time; 
-        check_frame(6);
-        player->set_text_rect(IntRect(int(player->current_frame) * 200, 4*200, 200, 200));
-     }
+       player->next_frame( 4, 6, false);
+    }
 
     if(Keyboard::isKeyPressed(Keyboard::Left)){
-        player->current_frame = player->current_frame + FRAME_SPEED * time; 
-        check_frame(6);
-        player->set_text_rect(IntRect(int(player->current_frame) * 200, 4*200, -200, 200));
-     }
-
+        player->next_frame(4, 6, true);
+    }
 }
