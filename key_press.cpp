@@ -6,24 +6,21 @@ void Key_press::set_player(Player* player){
 }
 
 void Key_press::action(){
-    Clock clock;
-    float time = clock.getElapsedTime().asMicroseconds();
-    clock.restart();
 
     if(Keyboard::isKeyPressed(Keyboard::Right)){
-        player->set_speed(Vector2f(PLAYER_SPEED * time, NULL));
+        player->set_speed(Vector2f(PLAYER_SPEED, NULL));
     }
 
     else if(Keyboard::isKeyPressed(Keyboard::Left)){
-        player->set_speed(Vector2f(-PLAYER_SPEED * time, NULL));
+        player->set_speed(Vector2f(-PLAYER_SPEED, NULL));
     }
 
     else if (Keyboard::isKeyPressed(Keyboard::Up)){
-        player->set_speed(Vector2f(NULL, -PLAYER_SPEED  * time ));
+        player->set_speed(Vector2f(NULL, -PLAYER_SPEED));
     }
 
     else if(Keyboard::isKeyPressed(Keyboard::Down)){
-        player->set_speed(Vector2f(NULL, PLAYER_SPEED * time));
+        player->set_speed(Vector2f(NULL, PLAYER_SPEED));
     }
 
     else{

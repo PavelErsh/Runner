@@ -26,6 +26,8 @@ class Player {
 		void next_frame( int frame_row, int max_frame , bool is_fleep);
 		void  check_frame(int max_frame, bool is_filp);
 
+		float get_time();
+
 		Vector2f get_position();
 		Vector2f get_speed();
 		Sprite get_sprite();

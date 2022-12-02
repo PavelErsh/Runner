@@ -34,11 +34,8 @@ void  Player::check_frame(int max_frame, bool is_filp){
 }
 
 void Player::next_frame(int frame_row, int max_frame, bool is_fleep){
-	Clock clock;
-    float time = clock.getElapsedTime().asMicroseconds();
-    clock.restart();
 
-	current_frame += FRAME_SPEED * time; 
+	current_frame += FRAME_SPEED * get_time(); 
 
 	if (is_fleep == false){
 		check_frame(max_frame, false);
@@ -55,6 +52,13 @@ Vector2f Player::get_position(){
 	return sprite.getPosition();
 }
 
+float Player::get_time(){
+	Clock clock;
+    float time = clock.getElapsedTime().asMicroseconds();
+    clock.restart();
+
+	return time;
+}
 
 void Player::set_position(Vector2f position){
 	sprite.setPosition(position.x, position.y);
@@ -69,7 +73,7 @@ void Player::set_texture_rect(IntRect rect){
 }
 
 void Player::set_speed(Vector2f speed){
-	this->speed = speed;
+	this->speed = speed * get_time();
 }
 
 Vector2f Player::get_speed(){
