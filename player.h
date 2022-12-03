@@ -11,10 +11,11 @@ class Player {
 		Vector2f speed;
 		Vector2f position;
 
-	public:
 		float current_frame = 0;
 		int frame_widht;
 		int frame_height;
+
+	public:
 
 		Player(String player_img, int frame_width, int frame_height, int start_row, int start_column);
 

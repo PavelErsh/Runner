@@ -22,13 +22,11 @@ Player::Player(String player_img, int frame_width, int frame_height, int start_r
 
 void  Player::check_frame(int max_frame, bool is_filp){
 	
-	if(current_frame > max_frame and is_filp == false)
-	{
+	if(current_frame > max_frame and is_filp == false){
 		current_frame -= max_frame;
 	}
 	
-	if(current_frame > max_frame and is_filp == true)
-	{
+	if(current_frame > max_frame and is_filp == true){
 		current_frame = 1;
 	}
 }
