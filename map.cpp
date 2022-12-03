@@ -7,7 +7,7 @@ using namespace sf;
     map_image.loadFromFile("images/map1.png");
     map_texture.loadFromImage(map_image);
     map_sprite.setTexture(map_texture);
-    player = new Player("images/cyborg.png", 200, 200, 0, 0);
+    player = new Player("images/cyborg.png", 200, 200, 0, 0);//w, h
  }
 void Map::update(){
     player->update();

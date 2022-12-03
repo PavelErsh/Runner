@@ -37,12 +37,12 @@ void Player::next_frame(int frame_row, int max_frame, bool is_fleep){
 
 	if (is_fleep == false){
 		check_frame(max_frame, false);
-    	set_texture_rect(IntRect(int(current_frame) * frame_widht, frame_row * frame_height, frame_widht, frame_height));
+    	set_texture_rect(IntRect( int(current_frame) * frame_widht, frame_height * frame_row, frame_widht, frame_height));
 	}
 
 	if (is_fleep == true){
-		check_frame(max_frame, true);
-		set_texture_rect(IntRect(int(current_frame) * frame_widht, frame_row * frame_height, -frame_widht, frame_height));
+		check_frame(max_frame + 1, true);
+		set_texture_rect(IntRect( int(current_frame) * frame_widht, frame_height * frame_row, -frame_widht, frame_height));
 	}
 }
 

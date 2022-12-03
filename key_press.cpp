@@ -30,10 +30,14 @@ void Key_press::action(){
 
 void Key_press::animation(){
     if(Keyboard::isKeyPressed(Keyboard::Right)){
-       player->next_frame( 4, 6, false);
+       player->next_frame(4, 6, false);
     }
 
     if(Keyboard::isKeyPressed(Keyboard::Left)){
         player->next_frame(4, 6, true);
+    }
+
+    if(Keyboard::isKeyPressed(Keyboard::Down)){
+        player->next_frame(0, 2, true);
     }
 }
