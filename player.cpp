@@ -52,7 +52,7 @@ Vector2f Player::get_position(){
 
 float Player::get_time(){
 	Clock clock;
-    float time = clock.getElapsedTime().asMicroseconds();
+    double time = clock.getElapsedTime().asMicroseconds();
     clock.restart();
 
 	return time;
@@ -71,7 +71,7 @@ void Player::set_texture_rect(IntRect rect){
 }
 
 void Player::set_speed(Vector2f speed){
-	this->speed = speed * get_time();
+	this->speed = speed;
 }
 
 Vector2f Player::get_speed(){
