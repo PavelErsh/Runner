@@ -9,7 +9,7 @@ const int DOWN_BORDER = 470;
 
 Camera::Camera(Player* player){
     this->player = player;
-    view.reset(FloatRect(0, 0, 800, 400));
+    view.reset(FloatRect(0, 0, 900, 600));
 }
 
 void Camera::setCenter(){
