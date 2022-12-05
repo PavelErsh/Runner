@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "map.h"
 #include "key_press.h"
+#include "camera.h"
 
 using namespace sf;
 
@@ -10,6 +11,7 @@ class Engine {
 	public:
 		RenderWindow window;
 		Key_press key_press;
+		Camera* camera;
 		Engine();
 
 		Map map;

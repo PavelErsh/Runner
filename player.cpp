@@ -14,7 +14,7 @@ Player::Player(String player_img, int frame_width, int frame_height, int start_r
 	texture.loadFromImage(image);
 
 	sprite.setTexture(texture);	
-
+	
 	set_texture_rect(IntRect(start_row, start_column, frame_width, frame_height));
 
 	set_position( Vector2f(0, 0) );
@@ -51,9 +51,9 @@ Vector2f Player::get_position(){
 }
 
 float Player::get_time(){
-  float time = clock.getElapsedTime().asMicroseconds();
-  time /= 1000;
-  clock.restart();
+	float time = clock.getElapsedTime().asMicroseconds();
+	time /= 1000;
+	clock.restart();
 
 	return time;
 }

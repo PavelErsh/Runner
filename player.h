@@ -11,7 +11,7 @@ class Player {
 		Vector2f speed;
 		Vector2f position;
 
-		float current_frame = 0;
+		float current_frame = NULL;
 		int frame_widht;
 		int frame_height;
 
