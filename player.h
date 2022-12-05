@@ -18,6 +18,7 @@ class Player {
 	public:
 
 		Player(String player_img, int frame_width, int frame_height, int start_row, int start_column);
+		Clock clock;
 
 		void set_position(Vector2f position);
 		void set_texture_rect(IntRect rect);

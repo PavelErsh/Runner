@@ -33,11 +33,11 @@ void  Player::check_frame(int max_frame, bool is_filp){
 
 void Player::next_frame(int frame_row, int max_frame, bool is_fleep){
 
-	current_frame += FRAME_SPEED * get_time(); 
+    current_frame += FRAME_SPEED * get_time(); 
 
 	if (is_fleep == false){
 		check_frame(max_frame, false);
-    	set_texture_rect(IntRect( int(current_frame) * frame_widht, frame_height * frame_row, frame_widht, frame_height));
+        set_texture_rect(IntRect( int(current_frame) * frame_widht, frame_height * frame_row, frame_widht, frame_height));
 	}
 
 	if (is_fleep == true){
@@ -51,9 +51,9 @@ Vector2f Player::get_position(){
 }
 
 float Player::get_time(){
-	Clock clock;
-    double time = clock.getElapsedTime().asMicroseconds();
-    clock.restart();
+  float time = clock.getElapsedTime().asMicroseconds();
+  time /= 1000;
+  clock.restart();
 
 	return time;
 }
@@ -71,7 +71,7 @@ void Player::set_texture_rect(IntRect rect){
 }
 
 void Player::set_speed(Vector2f speed){
-	this->speed = speed;
+	this->speed = speed * get_time();
 }
 
 Vector2f Player::get_speed(){
