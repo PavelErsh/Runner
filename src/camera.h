@@ -9,7 +9,6 @@ class Camera{
         Player* player;
 
         void setCenter();
-
     public:
         Camera(Player* player);
         void update();

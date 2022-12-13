@@ -1,11 +1,7 @@
+#include "constants.cpp"
 #include "camera.h"
 
 using namespace sf;
-
-const int LEFT_BORDER = 400;
-const int RIGHT_BORDER = 860;
-const int UP_BORDER = 250;
-const int DOWN_BORDER = 470;
 
 Camera::Camera(Player* player){
     this->player = player;
