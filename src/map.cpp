@@ -8,6 +8,7 @@ using namespace sf;
     map_texture.loadFromImage(map_image);
     map_sprite.setTexture(map_texture);
     player = new Player("images/cyborg.png", 200, 200, 0, 0);//w, h
+    coin = new Coin(Vector2f (100, 100));
  }
 void Map::update(){
     player->update();
@@ -32,5 +33,6 @@ Player* Map::get_player(){
             window.draw(map_sprite);
         }
     }
+    window.draw(coin->get_sprite());
     window.draw(player->get_sprite());
  }

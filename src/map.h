@@ -1,5 +1,8 @@
 #pragma once
+
 #include "player.h"
+#include "coin.h"
+
 using namespace sf;
 
 const int HEIGHT_MAP = 12;
@@ -8,6 +11,7 @@ const int WIDTH_MAP = 21;
 class Map{
     private:
         Player *player;
+        Coin *coin;
         Image map_image;
         Texture map_texture;
         Sprite map_sprite;

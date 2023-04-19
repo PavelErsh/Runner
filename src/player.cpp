@@ -1,7 +1,6 @@
 #include "player.h"
 #include "map.h"
 #include "constants.cpp"
-#include <iostream>
 
 using namespace sf;
 
@@ -101,7 +100,7 @@ void Player::stop_map_moving(){
 	}
 
 	if (position.y > DOWN_BORDER ){
-		position.y = DOWN_BORDER;
+		position.y = DOWN_BORDER ;
 	}
 
 	set_position(Vector2f(position.x, position.y));
