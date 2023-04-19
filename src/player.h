@@ -15,6 +15,8 @@ class Player {
 		int frame_widht;
 		int frame_height;
 
+		void stop_map_moving();
+
 	public:
 
 		Player(String player_img, int frame_width, int frame_height, int start_row, int start_column);
@@ -33,4 +35,7 @@ class Player {
 		Vector2f get_position();
 		Vector2f get_speed();
 		Sprite get_sprite();
+
+		int get_widht();
+		int get_height();
 };

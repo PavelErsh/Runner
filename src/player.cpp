@@ -1,5 +1,7 @@
 #include "player.h"
+#include "map.h"
 #include "constants.cpp"
+#include <iostream>
 
 using namespace sf;
 
@@ -81,6 +83,36 @@ Vector2f Player::get_speed(){
 void Player::update(){
 	sprite.move(speed.x, speed.y);
 	position = sprite.getPosition();
+	stop_map_moving();
+}
+
+void Player::stop_map_moving(){
+
+	if (position.x > RIGHT_BORDER + frame_widht ){
+		position.x = RIGHT_BORDER + frame_widht;
+	}
+
+	if (position.x < 0 + frame_widht / 2 ){
+		position.x = 0 + frame_widht / 2;
+	}
+
+	if (position.y < 0 ){
+		position.y = 0;
+	}
+
+	if (position.y > DOWN_BORDER ){
+		position.y = DOWN_BORDER;
+	}
+
+	set_position(Vector2f(position.x, position.y));
+}
+
+int Player::get_widht(){
+	return frame_widht;
+}
+
+int Player::get_height(){
+	return frame_height;
 }
 
 
