@@ -8,7 +8,7 @@ Map::Map(){
     map_texture.loadFromImage(map_image);
     map_sprite.setTexture(map_texture);
     player = new Player("images/cyborg.png", 200, 200, 0, 0);//w, h
-    coin = new Coin(Vector2f (100, 100));
+    coin = new Coin("images/coin.png", 32, 32,  Vector2f (100, 100), 0, 0);
  }
 
 void Map::update(){
