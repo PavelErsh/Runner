@@ -3,20 +3,23 @@
 
 using namespace sf;
 
- Map::Map(){
+Map::Map(){
     map_image.loadFromFile("images/map1.png");
     map_texture.loadFromImage(map_image);
     map_sprite.setTexture(map_texture);
     player = new Player("images/cyborg.png", 200, 200, 0, 0);//w, h
     coin = new Coin(Vector2f (100, 100));
  }
+
 void Map::update(){
     player->update();
 }
+
 Player* Map::get_player(){
     return player;
 }
- void Map::draw(RenderWindow &window){
+
+void Map::draw(RenderWindow &window){
    
     for(int row = 0; row < HEIGHT_MAP; row++){
         for(int column = 0; column < WIDTH_MAP; column++){
