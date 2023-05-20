@@ -9,6 +9,6 @@ class Coin : public Entity{
     
 
     public:
-        Coin(String player_img, int frame_width, int frame_height, Vector2f position, int start_row, int start_column);
+        Coin(String player_img, int frame_width, int frame_height, Vector2f position, int start_row = 0, int start_column = 0);
 
 };

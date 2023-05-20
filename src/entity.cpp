@@ -6,7 +6,7 @@
 
 using namespace sf;
 
-Entity ::Entity (String player_img, int frame_width, int frame_height, int start_row, int start_column){	
+Entity ::Entity (String player_img, int frame_width, int frame_height, int start_row = 0, int start_column = 0){	
 
 	this->frame_widht = frame_width;
 	this->frame_height = frame_height;
