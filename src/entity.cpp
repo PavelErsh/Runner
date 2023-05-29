@@ -77,6 +77,10 @@ void Entity ::set_speed(Vector2f speed){
 	this->speed = speed * get_time();
 }
 
+void Entity::set_name(String name){
+	this->name = name;
+}
+
 Vector2f Entity ::get_speed(){
 	return speed;
 }
@@ -86,14 +90,16 @@ void Entity ::update(){
 	position = sprite.getPosition();
 }
 
-
-
 int Entity::get_widht(){
 	return frame_widht;
 }
 
 int Entity::get_height(){
 	return frame_height;
+}
+
+String Entity::get_name(){
+	return name;
 }
 
 

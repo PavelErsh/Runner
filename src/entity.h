@@ -15,6 +15,8 @@ class Entity {
 		int frame_widht;
 		int frame_height;
 
+		String name;
+
     public:
         Entity (String player_img, int frame_width, int frame_height, int start_row, int start_column);
 		Clock clock;
@@ -22,6 +24,7 @@ class Entity {
 		void set_position(Vector2f position);
 		void set_texture_rect(IntRect rect);
 		void set_speed(Vector2f speed);
+		void set_name(String name);
 
 		void update();
 		void next_frame( int frame_row, int max_frame , bool is_fleep);
@@ -35,4 +38,6 @@ class Entity {
 
 		int get_widht();
 		int get_height();
+
+		String get_name();
 };

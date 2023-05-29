@@ -5,7 +5,8 @@
 
 using namespace sf;
 
-Player::Player(String player_img, int frame_width, int frame_height, int start_row, int start_column) : Entity (player_img, frame_width,  frame_height, start_row, start_column){	
+Player::Player(String player_img, int frame_width, int frame_height, int start_row, int start_column) 
+: Entity (player_img, frame_width,  frame_height, start_row, start_column){	
 
 	this->frame_widht = frame_width;
 	this->frame_height = frame_height;
@@ -20,6 +21,8 @@ Player::Player(String player_img, int frame_width, int frame_height, int start_r
 	set_texture_rect(IntRect(start_row, start_column, frame_width, frame_height));
 
 	set_position( Vector2f(0, 0) );
+
+	set_name("Player");
 }
 
 
