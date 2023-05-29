@@ -14,16 +14,15 @@ Map::Map(){
 
 void Map::update(){
     player->update();
-    
-    for (auto it = entities.begin(); it != entities.end();) {
-
+    for (auto it = entities.begin(); it != entities.end();it++)
+    {
         FloatRect playerCollider = player->get_sprite().getGlobalBounds(); 
-
         FloatRect otherCollider = (*it)->get_sprite().getGlobalBounds(); 
-
-        if (playerCollider.intersects(otherCollider) && (*it)->get_name() == "money") {
+        if (playerCollider.intersects(otherCollider) && (*it)->get_name() == "c") {
             entities.erase(it++);
+            cout << "work" << endl;
         }
+        
     }
 }
 
