@@ -13,5 +13,5 @@ class Player : public Entity{
 
 	public:
 
-		Player(String player_img, int frame_width, int frame_height, int start_row, int start_column);
+		Player(String player_img, int frame_width = 200, int frame_height = 200, int start_row = 0, int start_column = 0);
 };

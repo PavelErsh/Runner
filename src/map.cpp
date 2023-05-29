@@ -1,6 +1,9 @@
 #include "map.h"
 #include "constants.cpp"
 
+#include <iostream>
+using namespace std;
+
 using namespace sf;
 
 Map::Map(){
@@ -11,6 +14,17 @@ Map::Map(){
 
 void Map::update(){
     player->update();
+    
+    for (auto it = entities.begin(); it != entities.end();) {
+
+        FloatRect playerCollider = player->get_sprite().getGlobalBounds(); 
+
+        FloatRect otherCollider = (*it)->get_sprite().getGlobalBounds(); 
+
+        if (playerCollider.intersects(otherCollider) && (*it)->get_name() == "money") {
+            entities.erase(it++);
+        }
+    }
 }
 
 Player* Map::get_player(){
@@ -23,8 +37,8 @@ void Map::draw_map(RenderWindow &window){
             
             if(tile_map[row][column] == 'm'){
                  Floor* floor = new Floor("images/floor.png", 60, 60,  Vector2f (column * 60, row * 60));
-                entities.push_back(floor);
-                Coin* coin = new Coin("images/coin.png", 32, 32,  Vector2f (column * 60, row * 60));
+                 entities.push_back(floor);
+                Coin* coin = new Coin("images/coin.png", 32, 32,  Vector2f (column * 60, row * 60), 0, 0);
                 entities.push_back(coin);
                
             }
@@ -40,14 +54,17 @@ void Map::draw_map(RenderWindow &window){
             }
         }
     }
-
-    for (auto it = entities.begin(); it != entities.end();it++) {
-            window.draw((*it)->get_sprite());
-        }
+    
+   for (auto it = entities.begin(); it != entities.end();it++) {
+window.draw((*it)->get_sprite());
+}
+      /*for (auto v : entities){
+        window.draw( v->get_sprite() );
+      }*/
 }
 
 void Map::draw(RenderWindow &window){
    
     draw_map(window);
     window.draw(player->get_sprite());
- }
+}

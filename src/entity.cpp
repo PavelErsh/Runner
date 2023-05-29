@@ -3,6 +3,9 @@
 #include "constants.cpp"
 #include <algorithm> 
 
+#include <iostream>
+using namespace std;
+
 
 using namespace sf;
 
@@ -37,6 +40,7 @@ void  Entity ::check_frame(int max_frame, bool is_filp){
 void Entity ::next_frame(int frame_row, int max_frame, bool is_fleep){
 
     current_frame += FRAME_SPEED * get_time(); 
+	cout << current_frame << endl;
 
 	if (is_fleep == false){
 		check_frame(max_frame, false);
