@@ -1,6 +1,6 @@
 #include "constants.cpp"
 #include "camera.h"
-
+//
 using namespace sf;
 
 Camera::Camera(Player* player){
