@@ -67,3 +67,4 @@ void Map::draw(RenderWindow &window){
     draw_map(window);
     window.draw(player->get_sprite());
 }
+//sdhkasjd
